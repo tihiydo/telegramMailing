@@ -85,17 +85,17 @@ class TGSpam:
         try:
             account['tgClient'].sign_in(account['phone'], self.logInput('Введите верификационый код: '))
         except PhoneCodeInvalidError:
-            self.errorMessage(f"[{account['phone']}] Верификационый код не правильный.")
-            self.logMessageInfo("\n---\n")
-            checkVerificationCode(account)
+            self.logMessageError(f"[{account['phone']}] Верификационый код не правильный.")
+            self.checkVerificationCode(account)
+        except SessionPasswordNeededError:
+            self.check2FPassword(account)
 
     def check2FPassword(self, account):
         try:
             account['tgClient'].sign_in(password = self.logInput('Введите двуфакторный пароль: '))
         except PasswordHashInvalidError:
-            self.errorMessage(f"[{account['phone']}] Двухфакторный пароль не правильный.")
-            self.logMessageInfo("\n---\n")
-            check2FPassword(account)
+            self.logMessageError(f"[{account['phone']}] Двухфакторный пароль не правильный.")
+            self.check2FPassword(account)
 
 
     def connect(self):
@@ -114,10 +114,8 @@ class TGSpam:
                     account['status'] = False
                     self.logMessageInfo("\n---\n")
                     continue
-                try:
-                    self.checkVerificationCode(account)
-                except SessionPasswordNeededError:
-                    self.check2FPassword(account)
+                self.checkVerificationCode(account)
+
             if self.checkAccount(account):
                 self.logMessageInfo(f"[{account['phone']}] Аккаунт не имеет ограничений.")
                 self.logMessageInfo("\n---\n")
