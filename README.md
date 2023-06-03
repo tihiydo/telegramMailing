@@ -1,6 +1,4 @@
 # TG Mailing (Телеграм рассылка) / TG Spam (Телеграм спам)
-<h2>English</h2>
-<h4>This script was created for mass sending (spam) to telegrams from several accounts, it was developed only by me, use it wisely and send me a couple of dollars for coffee.<h4>
 <h2>Русский</h2>
 <h4>Этот скрипт создан для массовой рассылки (спама) в телеграм с нескольких аккаунтов, разработан только мной, используйте его с умом и пришлите мне пару долларов на кофе.<h4>
 
@@ -16,7 +14,9 @@
 5. Чтобы запустить скрипт, напишите команду <code>python start.py</code> или <code>python3 start.py</code> внутри папки, в которую вы распаковали скрипт.
 </em><br><br>
 Язык пользовательского интерфейса в этом скрипте - русский, поддержка английского языка планируется в будущем по мере развития проекта.</h5>
-  
+
+<h2>English</h2>
+<h4>This script was created for mass sending (spam) to telegrams from several accounts, it was developed only by me, use it wisely and send me a couple of dollars for coffee.<h4>
 <h3>Installing:<h3>
 <h5>You should have Python installed, preferably the latest versions, when installing which you clicked on the "Add to PATH" checkbox, and at the same time have a working pip command.<br>
 <br>
