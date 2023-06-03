@@ -139,7 +139,7 @@ class TGSpam:
             return selectedDialogObject.entity.username
         except ValueError:
             self.logMessageError("Пожайлуста введите число, а не строку.")
-            self.selectChatInput()
+            self.selectChatInput(groups)
 
     def scrapeMembers(self, selectedGroup):
         clearConsole()
@@ -149,7 +149,7 @@ class TGSpam:
                 self.logMessageWarning(f"[{account['phone']}] Парсит участников...")
                 account['tgClient'].connect()
                 for user in account['tgClient'].get_participants(selectedGroup, aggressive=False):
-                    if self.accounts.index(account) == True:
+                    if self.accounts.index(account) == 0:
                         if user.username:
                             users.append(user.username);
                         else:
