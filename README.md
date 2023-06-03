@@ -1,0 +1,2 @@
+# telegramMailing
+TG Spam
