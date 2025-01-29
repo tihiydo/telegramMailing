@@ -29,3 +29,12 @@ This script has been tested and developed on Python 3.9<br></h5>
 5. To run the script, write the command <code>python start.py</code> or <code>python3 start.py</code> inside the folder where you unpacked the script.
 </em><br><br>
 The user interface language in this script is Russian, English language support is planned in the future in case of project development.</h5>
+<br>
+<br>
+
+**Помочь проекту в разработке :)**
+<br>
+**Help project with developing :)**
+
+# USDT TRC20 WALLET 
+# TUECZ4B74sKvj8f21Z6TqstKBL1vRAmVi4
